@@ -1,6 +1,16 @@
-while true do
-    wait(0.5)
-    game.ReplicatedStorage.Events.SendTexts:FireServer("Phone")
+getgenv().autofarm = true; -- set this to false and then put -[[ in while check line 3 for explaination
+--[[
+FOR EXAMPLE: --[[getgenv().autofarm = false;
+
+while wait() do
+    if getgenv().autofarm == true then
+        game:Service('ReplicatedStorage')Events.SendTexts:FireServer("Phone");
     end
-   
--- My own autofarm texting simulator I made, do not delete wait or game will freeze
+end--]]
+
+-- script
+while wait() do -- avoid freezing the game while autofarming
+    if getgenv().autofarm == true then -- check if its true or not
+        game:Service('ReplicatedStorage')Events.SendTexts:FireServer("Phone"); -- fire the event
+    end
+end
