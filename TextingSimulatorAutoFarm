@@ -1,0 +1,6 @@
+while true do
+    wait(0.5)
+    game.ReplicatedStorage.Events.SendTexts:FireServer("Phone")
+    end
+   
+-- My own autofarm texting simulator I made, do not delete wait or game will freeze
