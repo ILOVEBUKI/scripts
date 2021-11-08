@@ -9,6 +9,7 @@ while wait() do
 end--]]
 
 -- script
+getgenv().autofarm = true;
 while wait() do -- avoid freezing the game while autofarming
     if getgenv().autofarm == true then -- check if its true or not
         game:Service('ReplicatedStorage')Events.SendTexts:FireServer("Phone"); -- fire the event
